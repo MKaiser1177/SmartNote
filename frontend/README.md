@@ -1,72 +1,84 @@
-# MERN Stack Notes App (Frontend)
+# SmartNote
 
-A React + Vite frontend for a full-stack notes application built with MongoDB, Express, React, and Node.js.
+SmartNote is a polished note-taking app built with the MERN stack. This frontend is powered by React, Vite, Tailwind CSS, and Axios, and connects to a Node.js / Express backend for secure note management.
 
-## About
+## 🚀 What SmartNote Offers
 
-This frontend provides a modern note-taking UI with:
+- User authentication and registration
+- Secure note creation, editing, and deletion
+- Protected routes for logged-in users
+- Responsive, mobile-friendly design
+- Seamless API integration with backend rate limiting support
+- Rich UI built with Tailwind CSS and reusable React components
 
-- User authentication via JWT
-- Protected routes for authenticated users
-- Create, read, update, and delete notes
-- Responsive design using Tailwind CSS
-- Rate-limited API handling for backend request protection
-
-## Features
-
-- Sign up and log in
-- Secure note creation and editing
-- Note list and individual note detail views
-- Client-side route protection
-- API error handling and user feedback
-
-## Tech Stack
+## 🧩 Tech Stack
 
 - React
 - Vite
 - Tailwind CSS
 - Axios
 - React Router
-- Context API for auth state
+- Context API
+- DaisyUI
 
-## Getting Started
+## 📁 Frontend Structure
 
-### Install dependencies
+- `src/main.jsx` — React app entry point
+- `src/App.jsx` — route and layout configuration
+- `src/context/AuthContext.jsx` — authentication state and provider
+- `src/lib/axios.js` — API client configuration
+- `src/components` — shared UI components
+- `src/Pages` — app pages for home, login, register, create note, and note details
+
+## ⚙️ Setup Instructions
+
+### 1. Install frontend dependencies
 
 ```bash
 cd frontend
 npm install
 ```
 
-### Run the app
-
-```bash
-npm run dev
-```
-
-### Backend setup
-
-The frontend expects a running backend in the `backend` folder. Start it separately with:
+### 2. Install backend dependencies
 
 ```bash
 cd ../backend
 npm install
+```
+
+### 3. Start the backend server
+
+```bash
 npm run dev
 ```
 
-## Folder Structure
+### 4. Start the frontend
 
-- `src/App.jsx` — main app shell and route configuration
-- `src/main.jsx` — React entry point
-- `src/components` — reusable UI components
-- `src/context/AuthContext.jsx` — authentication state provider
-- `src/lib/axios.js` — configured Axios API client
-- `src/Pages` — page-level views for login, register, notes, and note details
+```bash
+cd ../frontend
+npm run dev
+```
 
-## Notes
+Then open the local URL shown by Vite in your browser.
 
-Make sure the backend environment variables are configured before logging in. The frontend should be pointed to the backend API URL in `src/lib/axios.js` if needed.
+## ✅ Usage
 
----
+- Register a new account
+- Log in with your credentials
+- Create and save notes
+- View individual note details
+- Edit or delete notes securely
 
-Enjoy building with the MERN Stack!
+## 🔧 Configuration
+
+If the backend API URL changes, update the base URL in `frontend/src/lib/axios.js`.
+
+## 💡 Tips
+
+- Keep the backend running while using the frontend
+- Use strong credentials for authentication testing
+- Refresh the page only after the backend is available
+
+## 📌 Notes
+
+This repository includes both frontend and backend code. Start the backend first, then launch the frontend for the full SmartNote experience.
